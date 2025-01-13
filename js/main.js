@@ -1,7 +1,7 @@
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
     // 导航栏交互
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a:not(.lang-switch)');
     navLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
             link.style.opacity = '0.8';
@@ -26,12 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     langSwitches.forEach(switchBtn => {
         switchBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const lang = switchBtn.dataset.lang;
-            if (lang === 'en') {
-                window.location.href = 'index-en.html';
-            } else {
-                window.location.href = 'index.html';
-            }
+            window.location.href = switchBtn.href;
         });
     });
 
