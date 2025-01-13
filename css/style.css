@@ -206,3 +206,23 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
+
+.cta-button {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    content: "";
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 1em 0; /* Doubled from 0.5em */
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1em 0;
+}
