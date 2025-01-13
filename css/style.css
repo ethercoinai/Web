@@ -73,41 +73,26 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* 英雄区域 */
-.hero {
-    background: #3498db;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.cta-button {
-    background: #e67e22;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #d35400;
-}
-
 /* 内容区域样式 */
 .content-section {
-    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 25vh; /* Start at 1/4 height */
+}
+
+.content-section > .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 首页特定样式 */
+.index-content {
+    background: #3498db;
+    color: #fff;
 }
 
 .team-grid {
@@ -191,7 +176,7 @@ body {
 
 main {
     flex: 1;
-    min-height: calc(100vh - 200px); /* 确保内容区域最小高度 */
+    min-height: calc(100vh - 200px);
 }
 
 footer {
