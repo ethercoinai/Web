@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethercoin - 分布式AI算力平台</title>
+    <meta name="description" content="Ethercoin - 全球领先的分布式AI算力平台，连接全球计算资源，为人工智能提供强大算力支持">
+    <meta name="keywords" content="Ethercoin, 分布式计算, AI算力, 区块链, 人工智能">
+    <meta property="og:title" content="Ethercoin - 分布式AI算力平台">
+    <meta property="og:description" content="连接全球算力，赋能人工智能">
+    <meta property="og:image" content="https://ethercoin.com/images/Ethercoin_LOGO.png">
+    <meta property="og:url" content="https://ethercoin.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://ethercoin.com">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="images/Ethercoin_LOGO.png" as="image">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="images/Ethercoin_LOGO.png" alt="Ethercoin Logo" class="header-logo">
+            <img src="images/Ethercoin_LOGO_400.webp" 
+                 srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
+                 sizes="(max-width: 600px) 400px, 800px"
+                 alt="Ethercoin Logo" 
+                 class="header-logo"
+                 loading="lazy">
             <h1><a href="index.html">Ethercoin</a></h1>
             <nav>
                 <ul>
@@ -38,6 +53,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <noscript>请启用JavaScript以获得最佳浏览体验</noscript>
 </body>
 </html>
