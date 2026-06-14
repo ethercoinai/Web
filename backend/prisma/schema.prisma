@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  email      String   @unique
+  password   String
+  role       String   @default("user")
+  userType   String   @default("requestor") // requestor, worker, attestor
+  walletAddr String?  @map("wallet_addr")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  nodes      Node[]
+  earnings        Earning[]
+  requestedTasks  Task[]     @relation("requested_tasks")
+}
+
+model Node {
+  id              Int      @id @default(autoincrement())
+  userId          Int      @map("user_id")
+  name            String
+  gpuType         String   @map("gpu_type")
+  gpuCount        Int      @default(1) @map("gpu_count")
+  hashrate        Float    @default(0)
+  vram            Int      @default(0)
+  status          String   @default("offline")
+  location        String?
+  ip              String?
+  stakeAmount     Float    @default(1000) @map("stake_amount")
+  reputation      Float    @default(0)    // 0-100 reputation score
+  completedTasks  Int      @default(0)    @map("completed_tasks")
+  failedChallenges Int     @default(0)    @map("failed_challenges")
+  lastSeen        DateTime? @map("last_seen")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  user            User     @relation(fields: [userId], references: [id])
+  hashrateHistory HashrateHistory[]
+  earnings        Earning[]
+  tasks           Task[]   // assigned as worker
+  proofs          Proof[]
+
+  @@map("nodes")
+}
+
+model HashrateHistory {
+  id         Int      @id @default(autoincrement())
+  nodeId     Int      @map("node_id")
+  hashrate   Float
+  recordedAt DateTime @default(now()) @map("recorded_at")
+  node       Node     @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+
+  @@map("hashrate_history")
+}
+
+model Earning {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  nodeId    Int      @map("node_id")
+  amount    Float
+  type      String   // compute_reward, completion_bonus, porw_reward, attestation_fee
+  status    String   @default("pending")
+  createdAt DateTime @default(now()) @map("created_at")
+  user      User     @relation(fields: [userId], references: [id])
+  node      Node     @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+}
+
+model Task {
+  id              Int      @id @default(autoincrement())
+  requestorId     Int      @map("requestor_id")
+  workerId        Int?     @map("worker_id")
+  title           String
+  description     String?
+  taskHash        String?  @map("task_hash")
+  proofType       String   @default("zk")     // zk, tee, hybrid
+  status          String   @default("pending") // pending, assigned, running, proof_submitted, verifying, succeeded, failed, disputed
+  rewardAmount    Float    @default(0)    @map("reward_amount")
+  lockedAmount    Float    @default(0)    @map("locked_amount")
+  deadline        DateTime? @map("deadline")
+  proofData       String?  @map("proof_data")
+  gpuRequirement  String?  @map("gpu_requirement")
+  resultHash      String?  @map("result_hash")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  requestor       User     @relation("requested_tasks", fields: [requestorId], references: [id])
+  worker          Node?    @relation(fields: [workerId], references: [id])
+  proofs          Proof[]
+
+  @@map("tasks")
+}
+
+model Proof {
+  id         Int      @id @default(autoincrement())
+  taskId     Int      @map("task_id")
+  workerId   Int      @map("worker_id")
+  attestorId Int?     @map("attestor_id")
+  proofType  String   @default("zk")     // zk, tee, hybrid
+  proofData  String?  @map("proof_data")
+  status     String   @default("submitted") // submitted, verifying, verified, failed
+  verifiedAt DateTime? @map("verified_at")
+  createdAt  DateTime @default(now()) @map("created_at")
+  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  worker     Node     @relation(fields: [workerId], references: [id])
+
+  @@map("proofs")
+}

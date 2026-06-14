@@ -3,44 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于 Ethercoin - 去中心化 AI 分布式算力平台">
     <title>关于我们 - Ethercoin</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="images/Ethercoin_LOGO.png" alt="Ethercoin Logo" class="header-logo">
-            <h1><a href="index.html">Ethercoin</a></h1>
+            <div class="logo-title">
+                <img src="images/Ethercoin_LOGO_400.webp"
+                     srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
+                     sizes="(max-width: 600px) 400px, 800px"
+                     alt="Ethercoin Logo"
+                     class="header-logo"
+                     loading="lazy">
+                <h1><a href="index.html">Ethercoin</a></h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html" class="active">关于我们</a></li>
                     <li><a href="services.html">服务</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
-                    <li><a href="index-en.html" class="lang-switch">English</a></li>
+                    <li><a href="dashboard.html">管理平台</a></li>
+                    <li><a href="about-en.html" class="lang-switch">English</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="content-section">
+        <div class="page-header">
             <div class="container">
                 <h2>关于我们</h2>
-                <p>Ethercoin 是一个创新的分布式AI算力平台，致力于连接全球计算资源，为人工智能发展提供强大支持。</p>
-                
-                <h3>我们的使命</h3>
-                <p>通过区块链技术，我们正在构建一个去中心化的算力网络，让每个人都能参与并受益于人工智能的发展。</p>
+                <p>Ethercoin 是一个去中心化的 AI 分布式算力平台，连接全球闲置算力与 AI 工作负载</p>
+            </div>
+        </div>
 
+        <section class="page-content">
+            <div class="container">
+                <h3>我们的使命</h3>
+                <p>通过区块链技术，我们正在构建一个去中心化的算力网络，让每个人都能参与并受益于人工智能的发展。Ethercoin 的核心理念是将 AI 任务的工作量与链上经济价值锚定，形成一个信任最小化的自治算力市场。</p>
+
+                <h3>我们的愿景</h3>
+                <p>成为全球领先的去中心化 AI 算力基础设施，推动人工智能技术的民主化。让任何拥有闲置算力的个人或组织都能轻松参与 AI 计算网络，同时让 AI 开发者以更低成本获取所需的计算资源。</p>
+
+                <h3>核心架构</h3>
+
+                <div class="content-card">
+                    <h4>三角色模型</h4>
+                    <p><strong>Requestor（需求方）</strong> — 提交 AI 任务并在链上锁定 ECT 代币作为报酬，可选择 ZK / TEE / Hybrid 证明类型确保结果可验证。</p>
+                    <p><strong>Worker（算力方）</strong> — 接入平台提供 GPU/CPU 算力，质押 ECT 获取任务资格，完成任务后提交 PoRW 工作量证明获取奖励。</p>
+                    <p><strong>Attestor（验证者）</strong> — 对 Worker 提交的证明进行交叉验证，参与概率性冗余共识，维护网络诚实性并获取验证奖励。</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>三阶段结算流程</h4>
+                    <p><strong>阶段一：需求发布</strong> — Requestor 调用 TaskMarket 合约，锁定 ECT 代币，任务进入公开 Order Book 分发。</p>
+                    <p><strong>阶段二：任务执行</strong> — Worker 执行 AI 任务，生成 PoRW 证明并提交至 Verifier 合约验证。</p>
+                    <p><strong>阶段三：结算与代币管理</strong> — 验证通过后自动释放奖励，Treasury 回购并销毁代币，形成通缩经济模型。</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>混合验证体系</h4>
+                    <p>Ethercoin 采用 ZK+TEE+PoRW 三维验证：零知识证明验证计算正确性，可信执行环境保障数据隐私，概率性冗余共识提升欺诈成本。每一层验证相互补充，构建多层次可信体系。</p>
+                </div>
+
+                <h3>技术栈</h3>
+                <p>从前端到链上合约，Ethercoin 采用全栈自主可控的技术架构：React + TypeScript 构建管理面板，Express + Prisma 驱动后端 API，Ethereum L2（Optimism）作为结算层，Kubernetes + Volcano 调度 AI 工作负载，PyTorch / vLLM 执行推理与训练任务。</p>
+
+                <h3>我们的团队</h3>
+                <p>由经验丰富的区块链和人工智能专家组成，致力于技术创新和行业发展。团队在分布式系统、密码学、机器学习等领域拥有深厚的技术积累和丰富的实践经验。</p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="services.html">服务</a>
+                <a href="dashboard.html">管理平台</a>
+                <a href="index-en.html">English</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+                </a>
+            </div>
             <p>&copy; 2024 Ethercoin. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

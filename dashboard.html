@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>服务器错误 - Ethercoin</title>
+    <title>管理平台 - Ethercoin</title>
+    <link rel="canonical" href="https://ethercoin.com/dashboard/">
+    <meta http-equiv="refresh" content="0;url=/dashboard/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +28,8 @@
                     <li><a href="index.html">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="services.html">服务</a></li>
-                    <li><a href="dashboard.html">管理平台</a></li>
+                    <li><a href="dashboard.html" class="active">管理平台</a></li>
+                    <li><a href="dashboard-en.html" class="lang-switch">English</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,15 +38,21 @@
     <main>
         <section style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding-top:var(--header-height);">
             <div class="container" style="text-align:center;">
-                <div style="font-size:5em;font-weight:900;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;">500</div>
-                <p style="color:var(--text-secondary);font-size:1.2em;margin-bottom:8px;">抱歉，服务器遇到了一些问题</p>
-                <p style="color:var(--text-muted);font-size:0.95em;">请稍后再试，或返回 <a href="index.html" style="color:var(--accent-cyan);">首页</a></p>
+                <p style="color:var(--text-secondary);font-size:1.1em;">正在加载管理平台...</p>
+                <p style="color:var(--text-muted);font-size:0.9em;margin-top:12px;">如果没有自动跳转，<a href="/dashboard/" style="color:var(--accent-cyan);">点击这里</a></p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="services.html">服务</a>
+                <a href="dashboard.html">管理平台</a>
+                <a href="index-en.html">English</a>
+            </div>
             <div class="social-links">
                 <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
@@ -58,5 +67,6 @@
             <p>&copy; 2024 Ethercoin. All rights reserved.</p>
         </div>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

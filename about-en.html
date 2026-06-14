@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Ethercoin - Decentralized AI Computing Platform">
+    <title>About Us - Ethercoin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-title">
+                <img src="images/Ethercoin_LOGO_400.webp"
+                     srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
+                     sizes="(max-width: 600px) 400px, 800px"
+                     alt="Ethercoin Logo"
+                     class="header-logo"
+                     loading="lazy">
+                <h1><a href="index-en.html">Ethercoin</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="about-en.html" class="active">About</a></li>
+                    <li><a href="services-en.html">Services</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about.html" class="lang-switch">中文</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Ethercoin is a decentralized AI computing platform connecting global idle compute to AI workloads</p>
+            </div>
+        </div>
+
+        <section class="page-content">
+            <div class="container">
+                <h3>Our Mission</h3>
+                <p>Through blockchain technology, we are building a decentralized compute network that allows everyone to participate in and benefit from AI development. Ethercoin's core philosophy is anchoring AI task workloads to on-chain economic value, creating a trust-minimized autonomous compute marketplace.</p>
+
+                <h3>Our Vision</h3>
+                <p>To become the world's leading decentralized AI compute infrastructure, democratizing AI technology. Any individual or organization with idle compute can easily join the AI compute network, while AI developers access computing resources at lower costs.</p>
+
+                <h3>Core Architecture</h3>
+
+                <div class="content-card">
+                    <h4>Three-Role Model</h4>
+                    <p><strong>Requestor</strong> — Submits AI tasks and locks ECT tokens on-chain as reward. Chooses ZK / TEE / Hybrid proof types for verifiable results.</p>
+                    <p><strong>Worker</strong> — Provides GPU/CPU compute power, stakes ECT to qualify for tasks, generates PoRW proofs upon completion to earn rewards.</p>
+                    <p><strong>Attestor</strong> — Cross-validates Worker proofs, participates in probabilistic redundancy consensus, maintains network honesty and earns validation rewards.</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>Three-Stage Settlement</h4>
+                    <p><strong>Stage 1: Demand Posting</strong> — Requestor calls TaskMarket contract, locks ECT tokens. Tasks enter the public Order Book for distribution.</p>
+                    <p><strong>Stage 2: Task Execution</strong> — Worker executes AI tasks, generates PoRW proofs, and submits to Verifier contract for validation.</p>
+                    <p><strong>Stage 3: Settlement</strong> — Rewards released automatically upon verification. Treasury repurchases and burns tokens for a deflationary model.</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>Hybrid Verification</h4>
+                    <p>Ethercoin employs ZK+TEE+PoRW three-dimensional verification: zero-knowledge proofs verify computation correctness, trusted execution environments protect data privacy, and probabilistic redundancy consensus raises fraud costs. Each layer complements the others for a multi-tier trust framework.</p>
+                </div>
+
+                <h3>Tech Stack</h3>
+                <p>End-to-end sovereign architecture: React + TypeScript for the management dashboard, Express + Prisma for the backend API, Ethereum L2 (Optimism) as the settlement layer, Kubernetes + Volcano for AI workload scheduling, and PyTorch / vLLM for inference and training tasks.</p>
+
+                <h3>Our Team</h3>
+                <p>Composed of experienced blockchain and AI experts committed to technological innovation and industry development. The team has deep expertise in distributed systems, cryptography, and machine learning with extensive hands-on experience.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index-en.html">Home</a>
+                <a href="about-en.html">About</a>
+                <a href="services-en.html">Services</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="index.html">中文</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+                </a>
+            </div>
+            <p>&copy; 2024 Ethercoin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

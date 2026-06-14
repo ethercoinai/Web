@@ -3,39 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethercoin - Distributed AI Computing Platform</title>
+    <meta name="description" content="Ethercoin - Decentralized AI Computing Platform connecting Requestors, Workers, and Attestors via PoRW verification and on-chain settlement">
+    <meta name="keywords" content="Ethercoin, distributed computing, AI computing, blockchain, AI, PoRW, compute marketplace, decentralized">
+    <meta property="og:title" content="Ethercoin - Decentralized AI Computing Platform">
+    <meta property="og:description" content="Connecting global compute power, empowering AI — a trust-minimized compute marketplace powered by PoRW proofs and on-chain settlement">
+    <meta property="og:image" content="https://ethercoin.com/images/Ethercoin_LOGO.png">
+    <meta property="og:url" content="https://ethercoin.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://ethercoin.com">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="images/Ethercoin_LOGO_400.webp" as="image">
+    <title>Ethercoin - Decentralized AI Computing Platform</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Ethercoin</h1>
+            <div class="logo-title">
+                <img src="images/Ethercoin_LOGO_400.webp"
+                     srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
+                     sizes="(max-width: 600px) 400px, 800px"
+                     alt="Ethercoin Logo"
+                     class="header-logo"
+                     loading="lazy">
+                <h1><a href="index-en.html">Ethercoin</a></h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="index-en.html" class="active">Home</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="services-en.html">Services</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="index.html" class="lang-switch">中文</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Distributed AI Computing Platform</h2>
-            <p>Connecting global computing power, empowering artificial intelligence</p>
-            <a href="/register" class="cta-button">Join Now</a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">Next-Gen AI Compute Network</div>
+                <h2>
+                    Decentralized<br>
+                    <span class="gradient-text">AI Computing Platform</span>
+                </h2>
+                <p>Connecting Requestors, Workers, and Attestors through ZK+TEE+PoRW multi-layer verification and on-chain settlement — building a trust-minimized AI compute marketplace</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">Launch Dashboard</a>
+                    <a href="about-en.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">12,847+</div>
+                        <div class="hero-stat-label">Active Nodes</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">98.6K</div>
+                        <div class="hero-stat-label">Tasks Completed</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">356 PFLOPS</div>
+                        <div class="hero-stat-label">Total Compute</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">2.4M ECT</div>
+                        <div class="hero-stat-label">Rewards Distributed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Workflow</div>
+                    <h2>Three-Stage Settlement</h2>
+                    <p>From demand posting to token settlement — fully automated and trust-minimized</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Post Demand</h3>
+                        <p>Requestor locks ECT tokens via TaskMarket contract and submits AI task requests. Tasks enter the public Order Book, distributed to Workers by attestation zone</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Execute Task</h3>
+                        <p>Worker executes AI tasks off-chain, generates PoRW verifiable execution data, and submits ZK Proof or TEE attestation to the Verifier contract on-chain</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Settle &amp; Mint</h3>
+                        <p>Upon verification, ECT rewards are released automatically. Treasury repurchases and burns tokens based on protocol revenue — a demand-driven deflationary model</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Roles -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Platform Roles</div>
+                    <h2>Three Roles, One Ecosystem</h2>
+                    <p>Ethercoin brings together three core participants to build a complete compute economy</p>
+                </div>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <div class="role-icon requestor">🤖</div>
+                        <h3>Requestor</h3>
+                        <div class="role-sub">Compute Buyer</div>
+                        <ul>
+                            <li>Submit AI training/inference tasks</li>
+                            <li>Lock ECT tokens as reward</li>
+                            <li>Choose proof type (ZK / TEE / Hybrid)</li>
+                            <li>Receive verifiable results</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon worker">⚡</div>
+                        <h3>Worker</h3>
+                        <div class="role-sub">Compute Provider</div>
+                        <ul>
+                            <li>Provide GPU/CPU compute power</li>
+                            <li>Stake ECT to qualify for tasks</li>
+                            <li>Generate PoRW proofs</li>
+                            <li>Earn base + reputation + PoRW rewards</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon attestor">✓</div>
+                        <h3>Attestor</h3>
+                        <div class="role-sub">Validator</div>
+                        <ul>
+                            <li>Cross-validate Worker proofs</li>
+                            <li>Participate in probabilistic redundancy consensus</li>
+                            <li>Challenge dishonest actors</li>
+                            <li>Earn validation rewards + challenge fees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Network Stats</div>
+                    <h2>A Thriving Compute Network</h2>
+                    <p>Global nodes joining daily, compute power growing rapidly</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🖥️</div>
+                        <div class="stat-value">12,847</div>
+                        <div class="stat-label">Active Nodes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">98,600</div>
+                        <div class="stat-label">Tasks Done</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">356</div>
+                        <div class="stat-label">Compute (PFLOPS)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token Model -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Tokenomics</div>
+                    <h2>Demand-Driven Economy</h2>
+                    <p>Every ECT burn corresponds to a real compute settlement</p>
+                </div>
+                <div class="token-model">
+                    <div class="token-info">
+                        <h3>Dual Token Model</h3>
+                        <div class="token-sub">Ethercoin Token + Compute Point</div>
+                        <div class="token-details">
+                            <div class="token-row">
+                                <div class="token-name">
+                                    ECT
+                                    <small>Ethercoin Token — payments / staking / governance</small>
+                                </div>
+                                <div class="token-value">1B supply</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    CP
+                                    <small>Compute Point — reputation-weighted participation</small>
+                                </div>
+                                <div class="token-value">Inflationary</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Worker Stake
+                                    <small>Minimum stake to join network</small>
+                                </div>
+                                <div class="token-value">1,000 ECT</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Reward Split
+                                    <small>Base 60% + Reputation 25% + PoRW 15%</small>
+                                </div>
+                                <div class="token-value">Multi-tier</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="token-formula">
+                        <h3>Dynamic Monetary Policy</h3>
+                        <div class="formula-block">
+                            ECT issuance = Total Supply × (Task Growth ÷ Target Growth) × Base Inflation Rate
+                        </div>
+                        <div class="formula-desc">
+                            When compute demand exceeds the target, issuance increases to incentivize more node onboarding. When demand lags, the model shifts deflationary.<br><br>
+                            Treasury regularly repurchases ECT from the open market and burns tokens proportional to total compute completed — creating auditable on-chain burn records.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Tech Stack</div>
+                    <h2>Enterprise-Grade Architecture</h2>
+                    <p>From smart contracts to edge nodes, fully sovereign</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">⛓️</div>
+                        <div class="tech-name">Ethereum L2</div>
+                        <div class="tech-cat">Settlement</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔐</div>
+                        <div class="tech-name">ZK Proof</div>
+                        <div class="tech-cat">Zero-Knowledge</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📦</div>
+                        <div class="tech-name">Kubernetes</div>
+                        <div class="tech-cat">Orchestration</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🧠</div>
+                        <div class="tech-name">PyTorch / vLLM</div>
+                        <div class="tech-cat">AI Frameworks</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔗</div>
+                        <div class="tech-name">Tailscale VPN</div>
+                        <div class="tech-cat">Edge Network</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚙️</div>
+                        <div class="tech-name">Volcano</div>
+                        <div class="tech-cat">AI Scheduler</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🏗️</div>
+                        <div class="tech-name">Solidity</div>
+                        <div class="tech-cat">Smart Contracts</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🛡️</div>
+                        <div class="tech-name">Intel SGX</div>
+                        <div class="tech-cat">TEE Runtime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Join the Compute Revolution</h2>
+                <p>Whether you're an AI developer, compute provider, or validator — Ethercoin opens the door to the decentralized compute marketplace</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">Get Started</a>
+                    <a href="services-en.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="index-en.html">Home</a>
+                <a href="about-en.html">About</a>
+                <a href="services-en.html">Services</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="index.html">中文</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+                </a>
+            </div>
             <p>&copy; 2024 Ethercoin. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <noscript>Please enable JavaScript for the best experience</noscript>
 </body>
 </html>

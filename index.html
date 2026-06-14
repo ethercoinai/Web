@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethercoin - 分布式AI算力平台</title>
+    <meta name="description" content="Ethercoin - 去中心化 AI 分布式算力平台，连接 Requestor、Worker 与 Attestor，通过 PoRW 证明与链上结算构建信任最小化的人工智能算力市场">
+    <meta name="keywords" content="Ethercoin, 分布式计算, AI算力, 区块链, 人工智能, PoRW, 算力市场, 去中心化">
+    <meta property="og:title" content="Ethercoin - 去中心化 AI 算力平台">
+    <meta property="og:description" content="连接全球算力，赋能人工智能 — 基于 PoRW 证明与链上结算的信任最小化算力市场">
+    <meta property="og:image" content="https://ethercoin.com/images/Ethercoin_LOGO.png">
+    <meta property="og:url" content="https://ethercoin.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://ethercoin.com">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="images/Ethercoin_LOGO_400.webp" as="image">
+    <title>Ethercoin - 去中心化 AI 算力平台</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="images/Ethercoin_LOGO.png" alt="Ethercoin Logo" class="header-logo">
-            <h1><a href="/">Ethercoin</a></h1>
+            <div class="logo-title">
+                <img src="images/Ethercoin_LOGO_400.webp"
+                     srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
+                     sizes="(max-width: 600px) 400px, 800px"
+                     alt="Ethercoin Logo"
+                     class="header-logo"
+                     loading="lazy">
+                <h1><a href="index.html">Ethercoin</a></h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="/about">关于我们</a></li>
-                    <li><a href="/services">服务</a></li>
-                    <li><a href="/contact">联系我们</a></li>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="dashboard.html">管理平台</a></li>
                     <li><a href="index-en.html" class="lang-switch">English</a></li>
                 </ul>
             </nav>
@@ -23,21 +45,295 @@
     </header>
 
     <main>
+        <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <h2>分布式AI算力平台</h2>
-                <p>连接全球算力，赋能人工智能</p>
-                <a href="/register" class="cta-button">立即加入</a>
+                <div class="hero-badge">Ethercoin 下一代 AI 算力网络</div>
+                <h2>
+                    去中心化<br>
+                    <span class="gradient-text">AI 分布式算力平台</span>
+                </h2>
+                <p>连接 Requestor、Worker 与 Attestor，通过 ZK+TEE+PoRW 三维验证与链上结算，构建信任最小化的人工智能算力市场</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">进入管理平台</a>
+                    <a href="about.html" class="btn btn-secondary">了解更多</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">12,847+</div>
+                        <div class="hero-stat-label">活跃节点</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">98.6K</div>
+                        <div class="hero-stat-label">已完成任务</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">356 PFLOPS</div>
+                        <div class="hero-stat-label">总算力</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">2.4M ECT</div>
+                        <div class="hero-stat-label">已发放奖励</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">工作流程</div>
+                    <h2>三阶段结算流程</h2>
+                    <p>从需求发布到代币结算，全程自动化、信任最小化</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>需求发布</h3>
+                        <p>Requestor 调用 TaskMarket 合约锁定 ECT 代币，提交 AI 任务请求。任务进入公开 Order Book，按 Attestation 分区分发至 Worker</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>任务执行</h3>
+                        <p>Worker 在链下执行 AI 任务并生成 PoRW 可验证执行数据，提交 ZK Proof 或 TEE 证明至链上 Verifier 合约进行验证</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>结算与代币管理</h3>
+                        <p>验证通过后自动释放 ECT 奖励，Treasury 按协议收入回购并销毁代币，形成需求驱动型通缩经济模型</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Roles -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">平台角色</div>
+                    <h2>三方协作，共建生态</h2>
+                    <p>Ethercoin 围绕三个核心角色构建完整的算力经济生态</p>
+                </div>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <div class="role-icon requestor">🤖</div>
+                        <h3>Requestor</h3>
+                        <div class="role-sub">算力需求方</div>
+                        <ul>
+                            <li>提交 AI 训练/推理任务</li>
+                            <li>锁定 ECT 代币作为报酬</li>
+                            <li>选择证明类型（ZK / TEE / Hybrid）</li>
+                            <li>获得可验证的计算结果</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon worker">⚡</div>
+                        <h3>Worker</h3>
+                        <div class="role-sub">算力提供方</div>
+                        <ul>
+                            <li>接入平台提供 GPU/CPU 算力</li>
+                            <li>质押 ECT 获取任务资格</li>
+                            <li>生成 PoRW 工作量证明</li>
+                            <li>获得基础奖励 + 信誉奖励 + PoRW 奖励</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon attestor">✓</div>
+                        <h3>Attestor</h3>
+                        <div class="role-sub">验证者</div>
+                        <ul>
+                            <li>对 Worker 提交的证明进行交叉验证</li>
+                            <li>参与概率性冗余共识</li>
+                            <li>发起挑战以维护网络诚实</li>
+                            <li>获得验证奖励与挑战保证金</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">平台数据</div>
+                    <h2>蓬勃发展的算力网络</h2>
+                    <p>全球节点持续接入，算力规模快速增长</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🖥️</div>
+                        <div class="stat-value">12,847</div>
+                        <div class="stat-label">活跃节点</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">98,600</div>
+                        <div class="stat-label">已完成任务</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">356</div>
+                        <div class="stat-label">总算力 (PFLOPS)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">覆盖国家</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token Model -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">代币经济</div>
+                    <h2>需求驱动型经济模型</h2>
+                    <p>每一次 ECT 销毁都对应一次真实的任务结算</p>
+                </div>
+                <div class="token-model">
+                    <div class="token-info">
+                        <h3>双代币模型</h3>
+                        <div class="token-sub">Ethercoin Token + 算力积分</div>
+                        <div class="token-details">
+                            <div class="token-row">
+                                <div class="token-name">
+                                    ECT
+                                    <small>Ethercoin Token — 算力支付 / 质押 / 治理</small>
+                                </div>
+                                <div class="token-value">10 亿总量</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    CP
+                                    <small>Compute Point — 算力积分，参与信誉加权</small>
+                                </div>
+                                <div class="token-value">无限，按任务通胀</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Worker 抵押金
+                                    <small>首次接入需质押</small>
+                                </div>
+                                <div class="token-value">1,000 ECT</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    奖励结构
+                                    <small>基础奖励 60% + 信誉奖励 25% + PoRW 奖励 15%</small>
+                                </div>
+                                <div class="token-value">多元激励</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="token-formula">
+                        <h3>动态货币政策</h3>
+                        <div class="formula-block">
+                            ECT 发行量 = 全网总供给 × (任务量增长率 ÷ 目标增长率) × 基准通胀率
+                        </div>
+                        <div class="formula-desc">
+                            当算力需求增速超过目标时上调发行量以激励更多节点接入；需求低于目标时转向通缩。<br><br>
+                            Treasury 定期从公开市场回购 ECT，按任务总算力等比例销毁，形成可审计的链上销毁记录。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">技术栈</div>
+                    <h2>企业级技术架构</h2>
+                    <p>从链上合约到边缘节点，全栈自主可控</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">⛓️</div>
+                        <div class="tech-name">Ethereum L2</div>
+                        <div class="tech-cat">结算层</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔐</div>
+                        <div class="tech-name">ZK Proof</div>
+                        <div class="tech-cat">零知识证明</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📦</div>
+                        <div class="tech-name">Kubernetes</div>
+                        <div class="tech-cat">容器编排</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🧠</div>
+                        <div class="tech-name">PyTorch / vLLM</div>
+                        <div class="tech-cat">AI 框架</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔗</div>
+                        <div class="tech-name">Tailscale VPN</div>
+                        <div class="tech-cat">边缘网络</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚙️</div>
+                        <div class="tech-name">Volcano</div>
+                        <div class="tech-cat">AI 调度器</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🏗️</div>
+                        <div class="tech-name">Solidity</div>
+                        <div class="tech-cat">智能合约</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🛡️</div>
+                        <div class="tech-name">Intel SGX</div>
+                        <div class="tech-cat">TEE 可信环境</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>加入算力革命</h2>
+                <p>无论你是 AI 开发者、算力提供者还是验证者，Ethercoin 为你打开去中心化算力市场的大门</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">立即开始</a>
+                    <a href="services.html" class="btn btn-secondary">了解更多</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="services.html">服务</a>
+                <a href="dashboard.html">管理平台</a>
+                <a href="index-en.html">English</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+                </a>
+            </div>
             <p>&copy; 2024 Ethercoin. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <noscript>请启用 JavaScript 以获得最佳浏览体验</noscript>
 </body>
 </html>
