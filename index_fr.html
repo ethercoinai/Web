@@ -3,339 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ethercoin - Plateforme de Calcul IA Décentralisée connectant Requestors, Workers et Attestors via vérification multicouche ZK+TEE+Optimiste et règlement on-chain">
-    <meta name="keywords" content="Ethercoin, calcul distribué, calcul IA, blockchain, intelligence artificielle, Optimiste, marché de calcul, décentralisé">
-    <meta property="og:title" content="Ethercoin - Plateforme de Calcul IA Décentralisée">
-    <meta property="og:description" content="Connecter la puissance de calcul mondiale, donner du pouvoir à l'intelligence artificielle — un marché de calcul à confiance minimisée alimenté par la vérification ZK+TEE+Optimiste et le règlement on-chain">
+    <meta name="description" content="Ethercoin - Plateforme mondiale de calcul IA distribuée, connectant les ressources informatiques mondiales pour fournir un support de calcul puissant pour l'intelligence artificielle">
+    <meta name="keywords" content="Ethercoin, calcul distribué, calcul IA, blockchain, intelligence artificielle">
+    <meta property="og:title" content="Ethercoin - Plateforme de Calcul IA Distribuée">
+    <meta property="og:description" content="Connecter la puissance de calcul mondiale, donner du pouvoir à l'intelligence artificielle">
     <meta property="og:image" content="https://ethercoin.com/images/Ethercoin_LOGO.png">
     <meta property="og:url" content="https://ethercoin.com">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://ethercoin.com">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="js/main.js" as="script">
-    <link rel="preload" href="images/Ethercoin_LOGO_400.webp" as="image">
-    <title>Ethercoin - Plateforme de Calcul IA Décentralisée</title>
+    <link rel="preload" href="images/Ethercoin_LOGO.png" as="image">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo-title">
-                <img src="images/Ethercoin_LOGO_400.webp"
+                <img src="images/Ethercoin_LOGO_400.webp" 
                      srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
                      sizes="(max-width: 600px) 400px, 800px"
-                     alt="Ethercoin Logo"
+                     alt="Ethercoin Logo" 
                      class="header-logo"
                      loading="lazy">
                 <h1><a href="index_fr.html">Ethercoin</a></h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index_fr.html" class="active">Accueil</a></li>
                     <li><a href="about-fr.html">À Propos</a></li>
                     <li><a href="services-fr.html">Services</a></li>
-                    <li><a href="dashboard.html">Tableau de Bord</a></li>
-                    <li><a href="https://ethercoin.org" class="protocol-link" target="_blank">Protocole Ethercoin</a></li>
-                    <li><a href="index.html" class="lang-switch">中文</a></li>
-                    <li><a href="index-en.html" class="lang-switch">English</a></li>
+                    <li>
+                        <select class="lang-switch" onchange="location.href=this.value">
+                            <option value="index.html">中文</option>
+                            <option value="index-en.html">English</option>
+                            <option value="index_fr.html" selected>Français</option>
+                        </select>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero -->
-        <section class="hero">
+    <main class="index-content">
+        <section class="hero content-section">
             <div class="container">
-                <div class="hero-badge">Écosystème Ethercoin · Calcul Commercial</div>
-                <h2>
-                    Plateforme de Calcul IA<br>
-                    <span class="gradient-text">Décentralisée</span>
-                </h2>
-                <p>Connecter Requestors, Workers et Attestors via vérification multicouche ZK+TEE+Optimiste et règlement on-chain — construire un marché de calcul IA à confiance minimisée propulsé par le token ETHER</p>
-                <div class="hero-actions">
-                    <a href="dashboard.html" class="btn btn-primary">Accéder au Tableau de Bord</a>
-                    <a href="about-fr.html" class="btn btn-secondary">En Savoir Plus</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-value">12,847+</div>
-                        <div class="hero-stat-label">Nœuds Actifs</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-value">98.6K</div>
-                        <div class="hero-stat-label">Tâches Effectuées</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-value">356 PFLOPS</div>
-                        <div class="hero-stat-label">Puissance Totale</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-value">2.4M ETHER</div>
-                        <div class="hero-stat-label">Récompenses Distribuées</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works -->
-        <section class="section how-it-works">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Flux de Travail</div>
-                    <h2>Règlement en Trois Étapes</h2>
-                    <p>De la publication de la demande au règlement des tokens — entièrement automatisé et à confiance minimisée</p>
-                </div>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Publier une Demande</h3>
-                        <p>Le Requestor verrouille des tokens ETHER via le contrat TaskMarket et soumet des demandes de tâches IA. Les tâches entrent dans le carnet d'ordres public, distribuées aux Workers par zone d'attestation</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Exécuter la Tâche</h3>
-                        <p>Le Worker exécute les tâches IA hors chaîne, EtherFLOP (EFLOP) est mesuré avec précision, soumettant la Preuve ZK, les Ancres Optimistes ou l'attestation TEE au contrat Verifier sur la chaîne</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Règlement &amp; Frappe</h3>
-                        <p>Après vérification, les récompenses ETHER sont libérées automatiquement. Le Trésor rachète et brûle des tokens, et le protocole brûle une partie d'ETHER de chaque règlement — un modèle déflationniste piloté par le calcul</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Three Roles -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Rôles de la Plateforme</div>
-                    <h2>Trois Rôles, Un Écosystème</h2>
-                    <p>Ethercoin réunit trois participants principaux pour construire une économie de calcul complète</p>
-                </div>
-                <div class="roles-grid">
-                    <div class="role-card">
-                        <div class="role-icon requestor">🤖</div>
-                        <h3>Requestor</h3>
-                        <div class="role-sub">Acheteur de Calcul</div>
-                        <ul>
-                            <li>Soumettre des tâches de formation/inférence IA</li>
-                            <li>Verrouiller des tokens ETHER comme récompense</li>
-                            <li>Choisir le type de preuve (ZK / Optimiste / TEE / Hybride)</li>
-                            <li>Recevoir des résultats vérifiables</li>
-                        </ul>
-                    </div>
-                    <div class="role-card">
-                        <div class="role-icon worker">⚡</div>
-                        <h3>Worker</h3>
-                        <div class="role-sub">Fournisseur de Calcul</div>
-                        <ul>
-                            <li>Fournir une puissance de calcul GPU/CPU</li>
-                            <li>Staker ETHER pour être qualifié pour les tâches</li>
-                            <li>Générer des preuves EFLOP</li>
-                            <li>Gagner des récompenses de base + performance + bonus basées sur EFLOP</li>
-                        </ul>
-                    </div>
-                    <div class="role-card">
-                        <div class="role-icon attestor">✓</div>
-                        <h3>Attestor</h3>
-                        <div class="role-sub">Validateur</div>
-                        <ul>
-                            <li>Cross-valider les preuves des Workers</li>
-                            <li>Participer au consensus de redondance probabiliste</li>
-                            <li>Contester les acteurs malhonnêtes</li>
-                            <li>Gagner des récompenses de validation + frais de contestation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats -->
-        <section class="section stats-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Statistiques du Réseau</div>
-                    <h2>Un Réseau de Calcul Florissant</h2>
-                    <p>Des nœuds mondiaux rejoignent chaque jour, la puissance de calcul croît rapidement</p>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">🖥️</div>
-                        <div class="stat-value">12,847</div>
-                        <div class="stat-label">Nœuds Actifs</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">📊</div>
-                        <div class="stat-value">98,600</div>
-                        <div class="stat-label">Tâches Effectuées</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">⚡</div>
-                        <div class="stat-value">356</div>
-                        <div class="stat-label">Puissance (PFLOPS)</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🌍</div>
-                        <div class="stat-value">47</div>
-                        <div class="stat-label">Pays</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Token Model -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Tokenomics</div>
-                    <h2>Économie du Token ETHER</h2>
-                    <p>Une monnaie de calcul à offre fixe avec déflation intégrée</p>
-                </div>
-                <div class="token-model">
-                    <div class="token-info">
-                        <h3>Token ETHER</h3>
-                        <div class="token-sub">Offre Fixe de 21 000 Milliards</div>
-                        <div class="token-details">
-                            <div class="token-row">
-                                <div class="token-name">
-                                    Allocation Genesis
-                                    <small>90 % — distribuée au lancement du réseau</small>
-                                </div>
-                                <div class="token-value">18,9B ETHER</div>
-                            </div>
-                            <div class="token-row">
-                                <div class="token-name">
-                                    Réserve Minière
-                                    <small>10 % — minée sur 10 ans via les récompenses de calcul EFLOP</small>
-                                </div>
-                                <div class="token-value">2,1B ETHER</div>
-                            </div>
-                            <div class="token-row">
-                                <div class="token-name">
-                                    Incitation Perpétuelle
-                                    <small>0,1 % d'inflation annuelle après l'année 10 — plafonnée pour toujours</small>
-                                </div>
-                                <div class="token-value">0,1 % / an</div>
-                            </div>
-                            <div class="token-row">
-                                <div class="token-name">
-                                    Mécanisme Déflationniste
-                                    <small>Le protocole brûle ETHER des frais de règlement — l'offre ne fait que diminuer</small>
-                                </div>
-                                <div class="token-value">Désinflationniste</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="token-formula">
-                        <h3>Mécanisme Déflationniste</h3>
-                        <div class="formula-block">
-                            L'offre d'ETHER diminue à chaque règlement — le calcul pilote la déflation
-                        </div>
-                        <div class="formula-desc">
-                            Chaque règlement de tâche brûle une partie de l'ETHER payé par le Requestor. Aucun nouvel ETHER n'est frappé après la phase minière de 10 ans, sauf l'incitation perpétuelle de 0,1 %, garantissant que l'offre totale diminue au fil du temps à mesure que l'utilisation du réseau augmente.<br><br>
-                            Toutes les brûlures sont enregistrées on-chain — entièrement auditable, transparent et irréversible.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack -->
-        <section class="section tech-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-tag">Stack Technique</div>
-                    <h2>Architecture de Niveau Entreprise</h2>
-                    <p>Des contrats intelligents aux nœuds périphériques, entièrement souveraine</p>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">⛓️</div>
-                        <div class="tech-name">Ethereum L2</div>
-                        <div class="tech-cat">Règlement</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🔐</div>
-                        <div class="tech-name">Preuve ZK</div>
-                        <div class="tech-cat">Zero-Knowledge</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">📦</div>
-                        <div class="tech-name">Kubernetes</div>
-                        <div class="tech-cat">Orchestration</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🧠</div>
-                        <div class="tech-name">PyTorch / vLLM</div>
-                        <div class="tech-cat">Frameworks IA</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🔗</div>
-                        <div class="tech-name">Tailscale VPN</div>
-                        <div class="tech-cat">Réseau Périphérique</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">⚙️</div>
-                        <div class="tech-name">Volcano</div>
-                        <div class="tech-cat">Planificateur IA</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🏗️</div>
-                        <div class="tech-name">Solidity</div>
-                        <div class="tech-cat">Contrats Intelligents</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🛡️</div>
-                        <div class="tech-name">Intel SGX</div>
-                        <div class="tech-cat">Environnement TEE</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>Rejoignez la Révolution du Calcul</h2>
-                <p>Que vous soyez développeur IA, fournisseur de calcul ou validateur — Ethercoin ouvre la porte au marché décentralisé du calcul</p>
-                <div class="hero-actions">
-                    <a href="dashboard.html" class="btn btn-primary">Commencer</a>
-                    <a href="services-fr.html" class="btn btn-secondary">En Savoir Plus</a>
-                </div>
+                <h2>Plateforme de Calcul IA Distribuée</h2>
+                <p>Connecter la puissance de calcul mondiale, donner du pouvoir à l'intelligence artificielle</p>
+                    <a href="register.html" class="cta-button"></a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="index_fr.html">Accueil</a>
-                <a href="about-fr.html">À Propos</a>
-                <a href="services-fr.html">Services</a>
-                <a href="dashboard.html">Tableau de Bord</a>
-                <a href="https://ethercoin.org" target="_blank">Protocole Ethercoin</a>
-                <a href="https://ethercoin.org/whitepaper" target="_blank">Whitepaper</a>
-                <a href="https://ethercoin.org/yellowpaper" target="_blank">Yellowpaper</a>
-                <a href="index.html">中文</a>
-                <a href="index-en.html">English</a>
-            </div>
             <div class="social-links">
-                <a href="https://github.com/EtherCoinorg/ethercoin" class="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
                 </a>
-                <a href="https://x.com/ethercoinorg" class="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
                 </a>
                 <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
                 </a>
             </div>
-            <p>&copy; 2025 Ethercoin. Tous droits réservés. Le protocole Ethercoin est maintenu par <a href="https://ethercoin.org" style="color:rgba(255,255,255,0.7)">Ethercoin.org</a>.</p>
+            <p>&copy; 2024 Ethercoin. Tous droits réservés.</p>
         </div>
     </footer>
 
