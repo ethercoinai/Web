@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ethercoin - Weltweit führende verteilte KI-Computing-Plattform, die globale Computerressourcen verbindet, um leistungsstarke Computerunterstützung für künstliche Intelligenz zu bieten">
-    <meta name="keywords" content="Ethercoin, verteiltes Computing, KI-Computing, Blockchain, künstliche Intelligenz">
-    <meta property="og:title" content="Ethercoin - Verteilte KI-Computing-Plattform">
-    <meta property="og:description" content="Verbindung globaler Computerleistung, Ermöglichung künstlicher Intelligenz">
+    <meta name="description" content="Ethercoin - Dezentrale KI-Computing-Plattform, die Requestor, Worker und Attestor durch ZK+TEE+Optimistisch Mehrschichtverifikation und On-Chain-Abrechnung verbindet">
+    <meta name="keywords" content="Ethercoin, verteiltes Computing, KI-Computing, Blockchain, künstliche Intelligenz, Optimistisch, Compute-Marktplatz, dezentral">
+    <meta property="og:title" content="Ethercoin - Dezentrale KI-Computing-Plattform">
+    <meta property="og:description" content="Verbindung globaler Computerleistung, Ermöglichung künstlicher Intelligenz — ein vertrauensminimierter Compute-Marktplatz mit ZK+TEE+Optimistisch Verifikation und On-Chain-Abrechnung">
     <meta property="og:image" content="https://ethercoin.com/images/Ethercoin_LOGO.png">
     <meta property="og:url" content="https://ethercoin.com">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://ethercoin.com">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="js/main.js" as="script">
-    <link rel="preload" href="images/Ethercoin_LOGO.png" as="image">
+    <link rel="preload" href="images/Ethercoin_LOGO_400.webp" as="image">
+    <title>Ethercoin - Dezentrale KI-Computing-Plattform</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo-title">
-                <img src="images/Ethercoin_LOGO_400.webp" 
+                <img src="images/Ethercoin_LOGO_400.webp"
                      srcset="images/Ethercoin_LOGO_400.webp 400w, images/Ethercoin_LOGO_800.webp 800w"
                      sizes="(max-width: 600px) 400px, 800px"
-                     alt="Ethercoin Logo" 
+                     alt="Ethercoin Logo"
                      class="header-logo"
                      loading="lazy">
                 <h1><a href="index-de.html">Ethercoin</a></h1>
             </div>
             <nav>
                 <ul>
+                    <li><a href="index-de.html" class="active">Startseite</a></li>
                     <li><a href="about-de.html">Über uns</a></li>
                     <li><a href="services-de.html">Dienstleistungen</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="https://ethercoin.org" class="protocol-link" target="_blank">Ethercoin-Protokoll</a></li>
                     <li><a href="index.html" class="lang-switch">中文</a></li>
                     <li><a href="index-en.html" class="lang-switch">English</a></li>
                 </ul>
@@ -39,30 +46,296 @@
         </div>
     </header>
 
-    <main class="index-content">
-        <section class="hero content-section">
+    <main>
+        <!-- Hero -->
+        <section class="hero">
             <div class="container">
-                <h2>Verteilte KI-Computing-Plattform</h2>
-                <p>Verbindung globaler Computerleistung, Ermöglichung künstlicher Intelligenz</p>
-                    <a href="register.html" class="cta-button"></a>
+                <div class="hero-badge">Ethercoin Ökosystem · Kommerzielles Computing</div>
+                <h2>
+                    Dezentrale<br>
+                    <span class="gradient-text">KI-Computing-Plattform</span>
+                </h2>
+                <p>Verbindung von Requestor, Worker und Attestor durch ZK+TEE+Optimistisch mehrschichtige Verifikation und On-Chain-Abrechnung — Aufbau eines vertrauensminimierten KI-Compute-Marktplatzes, angetrieben durch den ETHER-Token</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">Zum Dashboard</a>
+                    <a href="about-de.html" class="btn btn-secondary">Mehr erfahren</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">12,847+</div>
+                        <div class="hero-stat-label">Aktive Knoten</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">98.6K</div>
+                        <div class="hero-stat-label">Aufgaben erledigt</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">356 PFLOPS</div>
+                        <div class="hero-stat-label">Gesamtrechenleistung</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">2.4M ETHER</div>
+                        <div class="hero-stat-label">Belohnungen verteilt</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Workflow</div>
+                    <h2>Dreistufige Abwicklung</h2>
+                    <p>Von der Nachfrageerfassung bis zur Token-Abrechnung — vollständig automatisiert und vertrauensminimiert</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Nachfrage einstellen</h3>
+                        <p>Der Requestor sperrt ETHER-Token über den TaskMarket-Vertrag und reicht KI-Aufgabenanfragen ein. Aufgaben gelangen in das öffentliche Orderbuch und werden nach Attestationszone an Worker verteilt</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Aufgabe ausführen</h3>
+                        <p>Der Worker führt KI-Aufgaben off-chain aus, EtherFLOP (EFLOP) wird präzise gemessen, wobei ZK Proof, Optimistic Anchors oder TEE-Nachweis an den Verifier-Vertrag on-chain übermittelt werden</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Abrechnen &amp; Prägen</h3>
+                        <p>Nach der Verifikation werden ETHER-Belohnungen automatisch freigegeben. Die Treasury kauft Token zurück und verbrennt sie, und das Protokoll verbrennt einen Teil von ETHER aus jeder Abrechnung — ein deflationäres rechengetriebenes Modell</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Roles -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Plattformrollen</div>
+                    <h2>Drei Rollen, Ein Ökosystem</h2>
+                    <p>Ethercoin vereint drei Kernakteure zur Schaffung einer vollständigen Compute-Ökonomie</p>
+                </div>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <div class="role-icon requestor">🤖</div>
+                        <h3>Requestor</h3>
+                        <div class="role-sub">Rechenkäufer</div>
+                        <ul>
+                            <li>KI-Trainings-/Inferenzaufgaben einreichen</li>
+                            <li>ETHER-Token als Belohnung sperren</li>
+                            <li>Beweistyp wählen (ZK / Optimistisch / TEE / Hybrid)</li>
+                            <li>Verifizierbare Ergebnisse erhalten</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon worker">⚡</div>
+                        <h3>Worker</h3>
+                        <div class="role-sub">Rechenanbieter</div>
+                        <ul>
+                            <li>GPU/CPU-Rechenleistung bereitstellen</li>
+                            <li>ETHER einsetzen, um für Aufgaben qualifiziert zu werden</li>
+                            <li>EFLOP-Nachweise generieren</li>
+                            <li>EFLOP-basierte Grund- + Leistungs- + Bonusbelohnungen verdienen</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon attestor">✓</div>
+                        <h3>Attestor</h3>
+                        <div class="role-sub">Validator</div>
+                        <ul>
+                            <li>Worker-Nachweise kreuzvalidieren</li>
+                            <li>An probabilistischem Redundanzkonsens teilnehmen</li>
+                            <li>Unehrliche Akteure anfechten</li>
+                            <li>Validierungsbelohnungen + Anfechtungsgebühren verdienen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Netzwerkdaten</div>
+                    <h2>Ein florierendes Compute-Netzwerk</h2>
+                    <p>Weltweit treten täglich neue Knoten bei, die Rechenleistung wächst rasant</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🖥️</div>
+                        <div class="stat-value">12,847</div>
+                        <div class="stat-label">Aktive Knoten</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">98,600</div>
+                        <div class="stat-label">Aufgaben erledigt</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">356</div>
+                        <div class="stat-label">Rechenleistung (PFLOPS)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">Länder</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token Model -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Tokenomics</div>
+                    <h2>ETHER Token-Ökonomie</h2>
+                    <p>Eine feste Angebotswährung mit eingebauter Deflation</p>
+                </div>
+                <div class="token-model">
+                    <div class="token-info">
+                        <h3>ETHER Token</h3>
+                        <div class="token-sub">21 Billionen Festangebot</div>
+                        <div class="token-details">
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Genesis-Zuteilung
+                                    <small>90 % — zum Netzwerkstart verteilt</small>
+                                </div>
+                                <div class="token-value">18,9B ETHER</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Mining-Reserve
+                                    <small>10 % — über 10 Jahre durch EFLOP-Rechenbelohnungen abgebaut</small>
+                                </div>
+                                <div class="token-value">2,1B ETHER</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Ewiger Anreiz
+                                    <small>0,1 % jährliche Inflation nach Jahr 10 — für immer gedeckelt</small>
+                                </div>
+                                <div class="token-value">0,1 % / Jahr</div>
+                            </div>
+                            <div class="token-row">
+                                <div class="token-name">
+                                    Deflationsmechanismus
+                                    <small>Protokoll verbrennt ETHER aus Abrechnungsgebühren — Angebot schrumpft nur</small>
+                                </div>
+                                <div class="token-value">Disinflationär</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="token-formula">
+                        <h3>Deflationsmechanismus</h3>
+                        <div class="formula-block">
+                            ETHER-Angebot sinkt mit jeder Abrechnung — Rechenleistung treibt Deflation
+                        </div>
+                        <div class="formula-desc">
+                            Jede Aufgabenabrechnung verbrennt einen Teil des vom Requestor gezahlten ETHER. Nach der 10-jährigen Mining-Phase wird kein neues ETHER geprägt, außer dem ewigen Anreiz von 0,1 %, was sicherstellt, dass das Gesamtangebot mit zunehmender Netznutzung langfristig sinkt.<br><br>
+                            Alle Verbrennungen werden on-chain aufgezeichnet — vollständig prüfbar, transparent und unumkehrbar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Tech-Stack</div>
+                    <h2>Unternehmensarchitektur</h2>
+                    <p>Von Smart Contracts bis zu Edge-Knoten, vollständig souverän</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">⛓️</div>
+                        <div class="tech-name">Ethereum L2</div>
+                        <div class="tech-cat">Abrechnung</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔐</div>
+                        <div class="tech-name">ZK Proof</div>
+                        <div class="tech-cat">Zero-Knowledge</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📦</div>
+                        <div class="tech-name">Kubernetes</div>
+                        <div class="tech-cat">Orchestrierung</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🧠</div>
+                        <div class="tech-name">PyTorch / vLLM</div>
+                        <div class="tech-cat">KI-Frameworks</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔗</div>
+                        <div class="tech-name">Tailscale VPN</div>
+                        <div class="tech-cat">Edge-Netzwerk</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚙️</div>
+                        <div class="tech-name">Volcano</div>
+                        <div class="tech-cat">KI-Scheduler</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🏗️</div>
+                        <div class="tech-name">Solidity</div>
+                        <div class="tech-cat">Smart Contracts</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🛡️</div>
+                        <div class="tech-name">Intel SGX</div>
+                        <div class="tech-cat">TEE-Laufzeit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Machen Sie mit bei der Compute-Revolution</h2>
+                <p>Ob KI-Entwickler, Rechenanbieter oder Validator — Ethercoin öffnet die Tür zum dezentralen Compute-Marktplatz</p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn btn-primary">Loslegen</a>
+                    <a href="services-de.html" class="btn btn-secondary">Mehr erfahren</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="index-de.html">Startseite</a>
+                <a href="about-de.html">Über uns</a>
+                <a href="services-de.html">Dienstleistungen</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="https://ethercoin.org" target="_blank">Ethercoin-Protokoll</a>
+                <a href="https://ethercoin.org/whitepaper" target="_blank">Whitepaper</a>
+                <a href="https://ethercoin.org/yellowpaper" target="_blank">Yellowpaper</a>
+                <a href="index.html">中文</a>
+                <a href="index-en.html">English</a>
+            </div>
             <div class="social-links">
-                <a href="https://github.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/EtherCoinorg/ethercoin" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
                 </a>
-                <a href="https://x.com/ethercoinai" class="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/ethercoinorg" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter">
                 </a>
                 <a href="mailto:press@ethercoin.com" class="social-link" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="E-Mail">
                 </a>
             </div>
-            <p>&copy; 2024 Ethercoin. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 Ethercoin. Alle Rechte vorbehalten. Das Ethercoin-Protokoll wird von <a href="https://ethercoin.org" style="color:rgba(255,255,255,0.7)">Ethercoin.org</a> betrieben.</p>
         </div>
     </footer>
 

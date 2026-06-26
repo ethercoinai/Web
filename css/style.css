@@ -888,3 +888,18 @@ footer p {
   background: rgba(0,212,255,0.3);
   color: #fff;
 }
+
+/* Protocol link in nav */
+.protocol-link {
+    color: rgba(255,255,255,0.85) !important;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    padding: 3px 10px !important;
+    font-size: 0.82em !important;
+    transition: all 0.2s ease;
+}
+
+.protocol-link:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+}
