@@ -91,17 +91,17 @@
                     <div class="step">
                         <div class="step-number">1</div>
                         <h3>需求发布</h3>
-                        <p>Requestor 调用 TaskMarket 合约锁定 ECT 代币，提交 AI 任务请求。任务进入公开 Order Book，按 Attestation 分区分发至 Worker</p>
+                        <p>Requestor 调用 TaskMarket 合约锁定 ETHER 代币，提交 AI 任务请求。任务进入公开 Order Book，按验证模式分区分发至 Worker</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <h3>任务执行</h3>
-                        <p>Worker 在链下执行 AI 任务并生成 PoRW 可验证执行数据，提交 ZK Proof 或 TEE 证明至链上 Verifier 合约进行验证</p>
+                        <p>Worker 在链下执行 AI 任务，工作量以 EFLOP 精确度量，提交 ZK Proof、Optimistic Anchors 或 TEE 证明至链上 Verifier 合约进行验证</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <h3>结算与代币管理</h3>
-                        <p>验证通过后自动释放 ECT 奖励，Treasury 按协议收入回购并销毁代币，形成需求驱动型通缩经济模型</p>
+                        <p>验证通过后自动释放 ETHER 奖励，燃烧部分交易费与罚金，结合可选的 0.1% 永续激励机制，形成可持续的经济模型</p>
                     </div>
                 </div>
             </div>
@@ -122,8 +122,8 @@
                         <div class="role-sub">算力需求方</div>
                         <ul>
                             <li>提交 AI 训练/推理任务</li>
-                            <li>锁定 ECT 代币作为报酬</li>
-                            <li>选择证明类型（ZK / TEE / Hybrid）</li>
+                            <li>锁定 ETHER 代币作为报酬</li>
+                            <li>选择证明类型（ZK / TEE / Optimistic）</li>
                             <li>获得可验证的计算结果</li>
                         </ul>
                     </div>
@@ -133,9 +133,9 @@
                         <div class="role-sub">算力提供方</div>
                         <ul>
                             <li>接入平台提供 GPU/CPU 算力</li>
-                            <li>质押 ECT 获取任务资格</li>
-                            <li>生成 PoRW 工作量证明</li>
-                            <li>获得基础奖励 + 信誉奖励 + PoRW 奖励</li>
+                            <li>质押 ETHER 获取任务资格</li>
+                            <li>生成 EFLOP 工作量证明</li>
+                            <li>获得基础奖励 + 信誉奖励 + 验证奖励</li>
                         </ul>
                     </div>
                     <div class="role-card">
@@ -196,47 +196,47 @@
                 </div>
                 <div class="token-model">
                     <div class="token-info">
-                        <h3>双代币模型</h3>
-                        <div class="token-sub">Ethercoin Token + 算力积分</div>
+                        <h3>ETHER 代币经济</h3>
+                        <div class="token-sub">21 万亿总量 · 90% 创世 · 10% 十年挖矿释放</div>
                         <div class="token-details">
                             <div class="token-row">
                                 <div class="token-name">
-                                    ECT
-                                    <small>Ethercoin Token — 算力支付 / 质押 / 治理</small>
+                                    ETHER
+                                    <small>算力支付 / 质押 / 治理</small>
                                 </div>
-                                <div class="token-value">10 亿总量</div>
+                                <div class="token-value">21 万亿</div>
                             </div>
                             <div class="token-row">
                                 <div class="token-name">
-                                    CP
-                                    <small>Compute Point — 算力积分，参与信誉加权</small>
+                                    创世分配
+                                    <small>早期贡献者、开发基金、社区建设</small>
                                 </div>
-                                <div class="token-value">无限，按任务通胀</div>
+                                <div class="token-value">90%</div>
                             </div>
                             <div class="token-row">
                                 <div class="token-name">
-                                    Worker 抵押金
-                                    <small>首次接入需质押</small>
+                                    挖矿释放
+                                    <small>每年 1%，通过 EFLOP 贡献获得</small>
                                 </div>
-                                <div class="token-value">1,000 ECT</div>
+                                <div class="token-value">10%</div>
                             </div>
                             <div class="token-row">
                                 <div class="token-name">
-                                    奖励结构
-                                    <small>基础奖励 60% + 信誉奖励 25% + PoRW 奖励 15%</small>
+                                    发行周期
+                                    <small>挖矿期满后可投票启动 0.1% 永续激励</small>
                                 </div>
-                                <div class="token-value">多元激励</div>
+                                <div class="token-value">10 年</div>
                             </div>
                         </div>
                     </div>
                     <div class="token-formula">
-                        <h3>动态货币政策</h3>
+                        <h3>通缩机制</h3>
                         <div class="formula-block">
-                            ECT 发行量 = 全网总供给 × (任务量增长率 ÷ 目标增长率) × 基准通胀率
+                            ETHER 价值 = 可验证算力需求 × EFLOP 单价 — 燃烧
                         </div>
                         <div class="formula-desc">
-                            当算力需求增速超过目标时上调发行量以激励更多节点接入；需求低于目标时转向通缩。<br><br>
-                            Treasury 定期从公开市场回购 ECT，按任务总算力等比例销毁，形成可审计的链上销毁记录。
+                            交易费和罚金定期销毁，结合挖矿期满后的通缩预期，形成长期价值存储机制。<br><br>
+                            接入 Ethercoin 算力网络，贡献 EFLOP 获得 ETHER 奖励。
                         </div>
                     </div>
                 </div>
